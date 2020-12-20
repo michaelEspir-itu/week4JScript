@@ -96,6 +96,31 @@ let myNumbers = [3, 4, 5, 6];
 let myOdds= myNumbers.filter(x => %2  == 1);
 console.log(myOdds);
 
+// asynchoronous behavior
+// setTimeout, setInterval
+
+callSomeFunction() //sync
+callAlongRunningServiceForData() //async
+callAnotherFunction() //sync
+
+let g = 85;
+let timeout = setTimeout(() =>{
+    console.log('this is a delayed greetin');
+},2000);
+console.log(`the value of a g is ${g}`);
+clearTimeout(timeout);
+
+//setinterval
+let x = 0;
+let interValid = setInterval(() =>{
+    x++;
+    console.log(`z is ${x}`);
+    //console.log('this is getting called a lot');
+    if(x > 5){
+        clearInterval(interValId);
+    }
+},500);
+
 
 
 
