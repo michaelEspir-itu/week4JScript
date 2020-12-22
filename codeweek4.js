@@ -13,9 +13,12 @@ let askAreWeThereYet= setInterval(() =>{
     console.log('Are we there yet?');
     },6000);
 
-let spellMyName = (firstName, lastName) => console.log(`${firstName} ${lastName}`);
-spellMyName('Michael','Espiritu');
-
+let spellMyName = (firstName, lastName) => {result = (`${firstName} ${lastName}`);
+console.log(result);
+return result;
+}
+let value = spellMyName("Michael","Espiritu");
+console.log(value);
 const processSplicedValue =(array,carValue,callSpliceFunction) =>{
 const result=array.splice(carValue,1);
 callSpliceFunction(result);
@@ -23,11 +26,15 @@ callSpliceFunction(result);
 const secondarray=['orange','blue','red'];
 processSplicedValue(secondarray,2,console.log);
 processSplicedValue([4,5,6],2,alert);
-processSplicedValue ([4,5,6],2,()=>result);
+processSplicedValue([4,5,6],2,value=>{alert(value)});
 
-processSplicedValue([4,5,6],2,spellMyName);
-console.log(processSplicedValue);
+spellMyName(value); 
+console.log("this is my name",value.length);
 
+let a =['toyota','bmw','honda'];
+let printCarName = a => { console.log (a);}
+    
+processSplicedValue(secondarray,2,spellMyName);
 
  
 
