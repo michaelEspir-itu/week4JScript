@@ -13,7 +13,7 @@ let askAreWeThereYet= setInterval(() =>{
     console.log('Are we there yet?');
     },6000);
 
-let spellMyName = (firstName, lastName) => {result = (`${firstName} ${lastName}`);
+let spellMyName = (firstName, lastName) => {let result = (`${firstName} ${lastName}`);
 console.log(result);
 return result;
 }
@@ -29,12 +29,12 @@ processSplicedValue([4,5,6],2,alert);
 processSplicedValue([4,5,6],2,value=>{alert(value)});
 
 spellMyName(value); 
-console.log("this is my name",value.length);
+console.log("This is the character value of my name",value.length);
 
 let a =['toyota','bmw','honda'];
 let printCarName = a => { console.log (a);}
     
-processSplicedValue(secondarray,2,spellMyName);
+processSplicedValue(a,2,printCarName);
 
  
 
