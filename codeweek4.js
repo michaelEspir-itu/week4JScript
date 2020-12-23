@@ -22,6 +22,7 @@ console.log(value);
 const processSplicedValue =(array,carValue,callSpliceFunction) =>{
 const result=array.splice(carValue,1);
 callSpliceFunction(result);
+return result;
 }
 const secondarray=['orange','blue','red'];
 processSplicedValue(secondarray,2,console.log);
